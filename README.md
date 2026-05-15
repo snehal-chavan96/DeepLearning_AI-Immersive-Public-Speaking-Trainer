@@ -26,51 +26,17 @@ AI-powered immersive public speaking training platform that uses Deep Learning, 
 - Three.js / WebXR (for immersive experience)
 
 ### Backend
-- Node.js
-- Express.js
+- Python
+- FastAPI
+- SQLAlchemy
+- Pydantic
 
 ### AI / ML
-- Python
 - TensorFlow / PyTorch
 - OpenCV
 - MediaPipe
 - SpeechRecognition
 - Generative AI APIs
-
-### Database
-- MongoDB
-
----
-
-## 📂 Project Structure
-
-```plaintext
-AI-Immersive-Public-Speaking-Coach/
-│
-├── frontend/          # React frontend
-├── backend/           # Node.js backend
-├── ai-models/         # AI/ML models
-├── docs/              # Documentation
-├── assets/            # Images & resources
-├── README.md
-└── .gitignore
-```
-
----
-
-## ⚙️ Installation
-
-### Clone Repository
-
-```bash
-git clone https://github.com/your-username/AI-Immersive-Public-Speaking-Coach.git
-```
-
-### Navigate to Project
-
-```bash
-cd AI-Immersive-Public-Speaking-Coach
-```
 
 ---
 
