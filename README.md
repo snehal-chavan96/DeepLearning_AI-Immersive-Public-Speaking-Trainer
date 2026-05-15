@@ -128,19 +128,6 @@ This project aims to provide an affordable AI-powered immersive speaking coach a
 
 ---
 
-## 👨‍💻 Team
-
-- Your Name
-- Team Members Names
-
----
-
-## 📸 Screenshots
-
-Add screenshots of your project here.
-
----
-
 ## 📜 License
 
 This project is licensed under the MIT License.
