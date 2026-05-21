@@ -18,9 +18,10 @@ export default function Home() {
     const fetchData = async () => {
       try {
         setLoading(true);
+        const API_BASE = import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000';
         const [statsRes, historyRes] = await Promise.all([
-          fetch('http://127.0.0.1:8000/stats', { headers: { 'Authorization': `Bearer ${token}` } }),
-          fetch('http://127.0.0.1:8000/history', { headers: { 'Authorization': `Bearer ${token}` } })
+          fetch(`${API_BASE}/stats`, { headers: { 'Authorization': `Bearer ${token}` } }),
+          fetch(`${API_BASE}/history`, { headers: { 'Authorization': `Bearer ${token}` } })
         ]);
 
         if (statsRes.ok && historyRes.ok) {

@@ -30,7 +30,8 @@ export default function History() {
     const fetchHistory = async () => {
       try {
         setLoading(true);
-        const response = await fetch('http://127.0.0.1:8000/history', {
+        const API_BASE = import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000';
+        const response = await fetch(`${API_BASE}/history`, {
           headers: { 'Authorization': `Bearer ${token}` }
         });
 
@@ -59,7 +60,8 @@ export default function History() {
   const handleSessionClick = async (sessionId) => {
     try {
       addToast("Loading session details...", "loading");
-      const response = await fetch(`http://127.0.0.1:8000/analysis/${sessionId}`, {
+      const API_BASE = import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000';
+      const response = await fetch(`${API_BASE}/analysis/${sessionId}`, {
         headers: { 'Authorization': `Bearer ${token}` }
       });
 

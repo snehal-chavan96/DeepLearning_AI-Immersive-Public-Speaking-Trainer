@@ -12,8 +12,9 @@ from database import get_db
 from models import User, SessionHistory
 
 # ── Configuration ────────────────────────────────────────────
+import os
 
-SECRET_KEY = "your-secret-key-change-in-production-abc123xyz789"
+SECRET_KEY = os.getenv("SECRET_KEY", "your-secret-key-change-in-production-abc123xyz789")
 ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRE_MINUTES = 60 * 24  # 24 hours
 

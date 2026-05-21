@@ -61,8 +61,9 @@ export default function Practice() {
           const timeoutId = setTimeout(() => controller.abort(), 30000); // 30s timeout
 
           console.log('Sending audio to backend...', { size: audioBlob.size, type: audioBlob.type });
+          const API_BASE = import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000';
           
-          const response = await fetch('http://127.0.0.1:8000/analyze', {
+          const response = await fetch(`${API_BASE}/analyze`, {
             method: 'POST',
             headers: {
               'Authorization': `Bearer ${token}`
